@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11protos/data.proto\x12\x07v1.user\"\x8d\x01\n\nPodMessage\x12\x11\n\tnamespace\x18\x01 \x01(\t\x12\x10\n\x08pod_name\x18\x02 \x01(\t\x12\r\n\x05ready\x18\x03 \x01(\t\x12\x0e\n\x06status\x18\x04 \x01(\t\x12\x0f\n\x07restart\x18\x05 \x01(\t\x12\x0b\n\x03\x61ge\x18\x06 \x01(\t\x12\n\n\x02ip\x18\x07 \x01(\t\x12\x11\n\tnode_name\x18\x08 \x01(\t\"#\n\rGetPodRequest\x12\x12\n\nname_space\x18\x01 \x01(\t\":\n\x0eGetPodResponse\x12(\n\x0bpod_message\x18\x01 \x01(\x0b\x32\x13.v1.user.PodMessage\"\"\n\x0ePostPodMessage\x12\x10\n\x08yamldata\x18\x01 \x01(\t\"#\n\x0ePostPodRequest\x12\x11\n\tyaml_data\x18\x01 \x01(\t\"D\n\x0fPostPodResponse\x12\x31\n\x10post_pod_message\x18\x01 \x01(\x0b\x32\x17.v1.user.PostPodMessage\"\x82\x01\n\nJobMessage\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x01(\t\x12\x11\n\tnode_name\x18\x02 \x01(\t\x12\x11\n\tjob_state\x18\x03 \x01(\t\x12\x10\n\x08job_name\x18\x04 \x01(\t\x12\x12\n\nstart_time\x18\x05 \x01(\t\x12\x17\n\x0fstandard_output\x18\x06 \x01(\t\"\"\n\rGetJobRequest\x12\x11\n\tnode_name\x18\x01 \x01(\t\">\n\x0eGetJobResponse\x12,\n\x0fget_job_message\x18\x01 \x01(\x0b\x32\x13.v1.user.JobMessage2\xba\x01\n\x04User\x12\x39\n\x06GetPod\x12\x16.v1.user.GetPodRequest\x1a\x17.v1.user.GetPodResponse\x12<\n\x07PostPod\x12\x17.v1.user.PostPodRequest\x1a\x18.v1.user.PostPodResponse\x12\x39\n\x06GetJob\x12\x16.v1.user.GetJobRequest\x1a\x17.v1.user.GetJobResponseb\x06proto3'
+  serialized_pb=b'\n\x11protos/data.proto\x12\x07v1.user\"\x8d\x01\n\nPodMessage\x12\x11\n\tnamespace\x18\x01 \x01(\t\x12\x10\n\x08pod_name\x18\x02 \x01(\t\x12\r\n\x05ready\x18\x03 \x01(\t\x12\x0e\n\x06status\x18\x04 \x01(\t\x12\x0f\n\x07restart\x18\x05 \x01(\t\x12\x0b\n\x03\x61ge\x18\x06 \x01(\t\x12\n\n\x02ip\x18\x07 \x01(\t\x12\x11\n\tnode_name\x18\x08 \x01(\t\"#\n\rGetPodRequest\x12\x12\n\nname_space\x18\x01 \x01(\t\":\n\x0eGetPodResponse\x12(\n\x0bpod_message\x18\x01 \x01(\x0b\x32\x13.v1.user.PodMessage\"\"\n\x0ePostPodMessage\x12\x10\n\x08yamldata\x18\x01 \x01(\t\"#\n\x0ePostPodRequest\x12\x11\n\tyaml_data\x18\x01 \x01(\t\"D\n\x0fPostPodResponse\x12\x31\n\x10post_pod_message\x18\x01 \x01(\x0b\x32\x17.v1.user.PostPodMessage\"\x82\x01\n\nJobMessage\x12\x0f\n\x07\x61\x63\x63ount\x18\x01 \x01(\t\x12\x11\n\tnode_name\x18\x02 \x01(\t\x12\x11\n\tjob_state\x18\x03 \x01(\t\x12\x10\n\x08job_name\x18\x04 \x01(\t\x12\x12\n\nstart_time\x18\x05 \x01(\t\x12\x17\n\x0fstandard_output\x18\x06 \x01(\t\"\"\n\rGetJobRequest\x12\x11\n\tnode_name\x18\x01 \x01(\t\">\n\x0eGetJobResponse\x12,\n\x0fget_job_message\x18\x01 \x01(\x0b\x32\x13.v1.user.JobMessage\"\x80\x01\n\x0fWorkListMessage\x12\x0f\n\x07runtime\x18\x01 \x01(\t\x12\x11\n\tnamespace\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05ready\x18\x04 \x01(\t\x12\x0e\n\x06status\x18\x05 \x01(\t\x12\x0f\n\x07restart\x18\x06 \x01(\t\x12\x0b\n\x03\x61ge\x18\x07 \x01(\t\"\'\n\x12GetWorkListRequest\x12\x11\n\tnamespace\x18\x01 \x01(\t\"M\n\x13GetWorkListResponse\x12\x36\n\x14get_worklist_message\x18\x01 \x01(\x0b\x32\x18.v1.user.WorkListMessage\"F\n\x11\x44\x65leteWorkRequest\x12\x10\n\x08yamldata\x18\x01 \x01(\t\x12\x11\n\tnamespace\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\"(\n\x12\x44\x65leteWorkResponse\x12\x12\n\ndeletework\x18\x01 \x01(\t\"2\n\x12GetWorkNameRequest\x12\n\n\x02ip\x18\x01 \x01(\t\x12\x10\n\x08nodename\x18\x02 \x01(\t\"\'\n\x13GetWorkNameResponse\x12\x10\n\x08workname\x18\x01 \x01(\t2\x95\x03\n\x04User\x12\x39\n\x06GetPod\x12\x16.v1.user.GetPodRequest\x1a\x17.v1.user.GetPodResponse\x12<\n\x07PostPod\x12\x17.v1.user.PostPodRequest\x1a\x18.v1.user.PostPodResponse\x12\x39\n\x06GetJob\x12\x16.v1.user.GetJobRequest\x1a\x17.v1.user.GetJobResponse\x12H\n\x0bGetWorkList\x12\x1b.v1.user.GetWorkListRequest\x1a\x1c.v1.user.GetWorkListResponse\x12\x45\n\nDeleteWork\x12\x1a.v1.user.DeleteWorkRequest\x1a\x1b.v1.user.DeleteWorkResponse\x12H\n\x0bGetWorkName\x12\x1b.v1.user.GetWorkNameRequest\x1a\x1c.v1.user.GetWorkNameResponseb\x06proto3'
 )
 
 
@@ -396,9 +396,297 @@ _GETJOBRESPONSE = _descriptor.Descriptor(
   serialized_end=645,
 )
 
+
+_WORKLISTMESSAGE = _descriptor.Descriptor(
+  name='WorkListMessage',
+  full_name='v1.user.WorkListMessage',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='runtime', full_name='v1.user.WorkListMessage.runtime', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='namespace', full_name='v1.user.WorkListMessage.namespace', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='v1.user.WorkListMessage.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ready', full_name='v1.user.WorkListMessage.ready', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='v1.user.WorkListMessage.status', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='restart', full_name='v1.user.WorkListMessage.restart', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='age', full_name='v1.user.WorkListMessage.age', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=648,
+  serialized_end=776,
+)
+
+
+_GETWORKLISTREQUEST = _descriptor.Descriptor(
+  name='GetWorkListRequest',
+  full_name='v1.user.GetWorkListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='namespace', full_name='v1.user.GetWorkListRequest.namespace', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=778,
+  serialized_end=817,
+)
+
+
+_GETWORKLISTRESPONSE = _descriptor.Descriptor(
+  name='GetWorkListResponse',
+  full_name='v1.user.GetWorkListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='get_worklist_message', full_name='v1.user.GetWorkListResponse.get_worklist_message', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=819,
+  serialized_end=896,
+)
+
+
+_DELETEWORKREQUEST = _descriptor.Descriptor(
+  name='DeleteWorkRequest',
+  full_name='v1.user.DeleteWorkRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='yamldata', full_name='v1.user.DeleteWorkRequest.yamldata', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='namespace', full_name='v1.user.DeleteWorkRequest.namespace', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='v1.user.DeleteWorkRequest.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=898,
+  serialized_end=968,
+)
+
+
+_DELETEWORKRESPONSE = _descriptor.Descriptor(
+  name='DeleteWorkResponse',
+  full_name='v1.user.DeleteWorkResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='deletework', full_name='v1.user.DeleteWorkResponse.deletework', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=970,
+  serialized_end=1010,
+)
+
+
+_GETWORKNAMEREQUEST = _descriptor.Descriptor(
+  name='GetWorkNameRequest',
+  full_name='v1.user.GetWorkNameRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ip', full_name='v1.user.GetWorkNameRequest.ip', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='nodename', full_name='v1.user.GetWorkNameRequest.nodename', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1012,
+  serialized_end=1062,
+)
+
+
+_GETWORKNAMERESPONSE = _descriptor.Descriptor(
+  name='GetWorkNameResponse',
+  full_name='v1.user.GetWorkNameResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='workname', full_name='v1.user.GetWorkNameResponse.workname', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1064,
+  serialized_end=1103,
+)
+
 _GETPODRESPONSE.fields_by_name['pod_message'].message_type = _PODMESSAGE
 _POSTPODRESPONSE.fields_by_name['post_pod_message'].message_type = _POSTPODMESSAGE
 _GETJOBRESPONSE.fields_by_name['get_job_message'].message_type = _JOBMESSAGE
+_GETWORKLISTRESPONSE.fields_by_name['get_worklist_message'].message_type = _WORKLISTMESSAGE
 DESCRIPTOR.message_types_by_name['PodMessage'] = _PODMESSAGE
 DESCRIPTOR.message_types_by_name['GetPodRequest'] = _GETPODREQUEST
 DESCRIPTOR.message_types_by_name['GetPodResponse'] = _GETPODRESPONSE
@@ -408,6 +696,13 @@ DESCRIPTOR.message_types_by_name['PostPodResponse'] = _POSTPODRESPONSE
 DESCRIPTOR.message_types_by_name['JobMessage'] = _JOBMESSAGE
 DESCRIPTOR.message_types_by_name['GetJobRequest'] = _GETJOBREQUEST
 DESCRIPTOR.message_types_by_name['GetJobResponse'] = _GETJOBRESPONSE
+DESCRIPTOR.message_types_by_name['WorkListMessage'] = _WORKLISTMESSAGE
+DESCRIPTOR.message_types_by_name['GetWorkListRequest'] = _GETWORKLISTREQUEST
+DESCRIPTOR.message_types_by_name['GetWorkListResponse'] = _GETWORKLISTRESPONSE
+DESCRIPTOR.message_types_by_name['DeleteWorkRequest'] = _DELETEWORKREQUEST
+DESCRIPTOR.message_types_by_name['DeleteWorkResponse'] = _DELETEWORKRESPONSE
+DESCRIPTOR.message_types_by_name['GetWorkNameRequest'] = _GETWORKNAMEREQUEST
+DESCRIPTOR.message_types_by_name['GetWorkNameResponse'] = _GETWORKNAMERESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PodMessage = _reflection.GeneratedProtocolMessageType('PodMessage', (_message.Message,), {
@@ -473,6 +768,55 @@ GetJobResponse = _reflection.GeneratedProtocolMessageType('GetJobResponse', (_me
   })
 _sym_db.RegisterMessage(GetJobResponse)
 
+WorkListMessage = _reflection.GeneratedProtocolMessageType('WorkListMessage', (_message.Message,), {
+  'DESCRIPTOR' : _WORKLISTMESSAGE,
+  '__module__' : 'protos.data_pb2'
+  # @@protoc_insertion_point(class_scope:v1.user.WorkListMessage)
+  })
+_sym_db.RegisterMessage(WorkListMessage)
+
+GetWorkListRequest = _reflection.GeneratedProtocolMessageType('GetWorkListRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETWORKLISTREQUEST,
+  '__module__' : 'protos.data_pb2'
+  # @@protoc_insertion_point(class_scope:v1.user.GetWorkListRequest)
+  })
+_sym_db.RegisterMessage(GetWorkListRequest)
+
+GetWorkListResponse = _reflection.GeneratedProtocolMessageType('GetWorkListResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETWORKLISTRESPONSE,
+  '__module__' : 'protos.data_pb2'
+  # @@protoc_insertion_point(class_scope:v1.user.GetWorkListResponse)
+  })
+_sym_db.RegisterMessage(GetWorkListResponse)
+
+DeleteWorkRequest = _reflection.GeneratedProtocolMessageType('DeleteWorkRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEWORKREQUEST,
+  '__module__' : 'protos.data_pb2'
+  # @@protoc_insertion_point(class_scope:v1.user.DeleteWorkRequest)
+  })
+_sym_db.RegisterMessage(DeleteWorkRequest)
+
+DeleteWorkResponse = _reflection.GeneratedProtocolMessageType('DeleteWorkResponse', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEWORKRESPONSE,
+  '__module__' : 'protos.data_pb2'
+  # @@protoc_insertion_point(class_scope:v1.user.DeleteWorkResponse)
+  })
+_sym_db.RegisterMessage(DeleteWorkResponse)
+
+GetWorkNameRequest = _reflection.GeneratedProtocolMessageType('GetWorkNameRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETWORKNAMEREQUEST,
+  '__module__' : 'protos.data_pb2'
+  # @@protoc_insertion_point(class_scope:v1.user.GetWorkNameRequest)
+  })
+_sym_db.RegisterMessage(GetWorkNameRequest)
+
+GetWorkNameResponse = _reflection.GeneratedProtocolMessageType('GetWorkNameResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETWORKNAMERESPONSE,
+  '__module__' : 'protos.data_pb2'
+  # @@protoc_insertion_point(class_scope:v1.user.GetWorkNameResponse)
+  })
+_sym_db.RegisterMessage(GetWorkNameResponse)
+
 
 
 _USER = _descriptor.ServiceDescriptor(
@@ -482,8 +826,8 @@ _USER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=648,
-  serialized_end=834,
+  serialized_start=1106,
+  serialized_end=1511,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetPod',
@@ -512,6 +856,36 @@ _USER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETJOBREQUEST,
     output_type=_GETJOBRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetWorkList',
+    full_name='v1.user.User.GetWorkList',
+    index=3,
+    containing_service=None,
+    input_type=_GETWORKLISTREQUEST,
+    output_type=_GETWORKLISTRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DeleteWork',
+    full_name='v1.user.User.DeleteWork',
+    index=4,
+    containing_service=None,
+    input_type=_DELETEWORKREQUEST,
+    output_type=_DELETEWORKRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetWorkName',
+    full_name='v1.user.User.GetWorkName',
+    index=5,
+    containing_service=None,
+    input_type=_GETWORKNAMEREQUEST,
+    output_type=_GETWORKNAMERESPONSE,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

@@ -6,6 +6,9 @@ service User {
     rpc GetPod(GetPodRequest) returns (GetPodResponse);
     rpc PostPod(PostPodRequest) returns (PostPodResponse);
     rpc GetJob(GetJobRequest) returns (GetJobResponse);
+    rpc GetWorkList(GetWorkListRequest) returns (GetWorkListResponse);
+    rpc DeleteWork(DeleteWorkRequest) returns (DeleteWorkResponse);
+    rpc GetWorkName(GetWorkNameRequest) returns (GetWorkNameResponse);
 }
 
 message PodMessage {
@@ -54,4 +57,42 @@ message GetJobRequest {
 
 message GetJobResponse {
     JobMessage get_job_message = 1;
+}
+
+message WorkListMessage {
+    string runtime = 1;
+    string namespace = 2;
+    string name = 3;
+    string ready = 4;
+    string status = 5;
+    string restart = 6;
+    string age = 7;
+}
+
+
+message GetWorkListRequest {
+    string namespace = 1;
+}
+
+message GetWorkListResponse {
+    WorkListMessage get_worklist_message = 1;
+}
+
+message DeleteWorkRequest {
+    string yamldata = 1;
+    string namespace = 2;
+    string name = 3;
+}
+
+message DeleteWorkResponse {
+    string deletework = 1;
+}
+
+message GetWorkNameRequest {
+    string ip = 1;
+    string nodename = 2;
+}
+
+message GetWorkNameResponse {
+    string workname = 1;
 }

@@ -56,10 +56,12 @@ spec:
       nodeName: nongpuserver
       containers:
       - name: operatortest
-        image: ketidevit2/kmc-operator-test:v26
+        image: ketidevit2/kmc-operator-test:v49
         ports:
         - containerPort: 10100
-        # args:
+        #command: ["python", "main.py"]
+        #args:
+         # - python3 main.py
         # - operator
         # - --loginip=10.0.5.24
         # - --port=6820
@@ -67,7 +69,12 @@ spec:
         volumeMounts:
         - name: jwtkey
           mountPath: /etc/slurm
+        - name: slurmpath
+          mountPath: /data/NFS
       volumes:
       - name: jwtkey
         hostPath: 
           path: /etc/slurm
+      - name: slurmpath
+        hostPath:
+          path: /data/NFS

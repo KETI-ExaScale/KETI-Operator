@@ -56,4 +56,6 @@ spython==0.1.17
 # systemd-python==234
 urllib3==1.26.8
 webencodings==0.5.1
+typing_extensions==4.1.1
+
 # websocket-client==1.2.3

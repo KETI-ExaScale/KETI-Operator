@@ -29,6 +29,21 @@ class UserStub(object):
                 request_serializer=protos_dot_data__pb2.GetJobRequest.SerializeToString,
                 response_deserializer=protos_dot_data__pb2.GetJobResponse.FromString,
                 )
+        self.GetWorkList = channel.unary_unary(
+                '/v1.user.User/GetWorkList',
+                request_serializer=protos_dot_data__pb2.GetWorkListRequest.SerializeToString,
+                response_deserializer=protos_dot_data__pb2.GetWorkListResponse.FromString,
+                )
+        self.DeleteWork = channel.unary_unary(
+                '/v1.user.User/DeleteWork',
+                request_serializer=protos_dot_data__pb2.DeleteWorkRequest.SerializeToString,
+                response_deserializer=protos_dot_data__pb2.DeleteWorkResponse.FromString,
+                )
+        self.GetWorkName = channel.unary_unary(
+                '/v1.user.User/GetWorkName',
+                request_serializer=protos_dot_data__pb2.GetWorkNameRequest.SerializeToString,
+                response_deserializer=protos_dot_data__pb2.GetWorkNameResponse.FromString,
+                )
 
 
 class UserServicer(object):
@@ -52,6 +67,24 @@ class UserServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetWorkList(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteWork(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetWorkName(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_UserServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -69,6 +102,21 @@ def add_UserServicer_to_server(servicer, server):
                     servicer.GetJob,
                     request_deserializer=protos_dot_data__pb2.GetJobRequest.FromString,
                     response_serializer=protos_dot_data__pb2.GetJobResponse.SerializeToString,
+            ),
+            'GetWorkList': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetWorkList,
+                    request_deserializer=protos_dot_data__pb2.GetWorkListRequest.FromString,
+                    response_serializer=protos_dot_data__pb2.GetWorkListResponse.SerializeToString,
+            ),
+            'DeleteWork': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteWork,
+                    request_deserializer=protos_dot_data__pb2.DeleteWorkRequest.FromString,
+                    response_serializer=protos_dot_data__pb2.DeleteWorkResponse.SerializeToString,
+            ),
+            'GetWorkName': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetWorkName,
+                    request_deserializer=protos_dot_data__pb2.GetWorkNameRequest.FromString,
+                    response_serializer=protos_dot_data__pb2.GetWorkNameResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -128,5 +176,56 @@ class User(object):
         return grpc.experimental.unary_unary(request, target, '/v1.user.User/GetJob',
             protos_dot_data__pb2.GetJobRequest.SerializeToString,
             protos_dot_data__pb2.GetJobResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetWorkList(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.user.User/GetWorkList',
+            protos_dot_data__pb2.GetWorkListRequest.SerializeToString,
+            protos_dot_data__pb2.GetWorkListResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteWork(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.user.User/DeleteWork',
+            protos_dot_data__pb2.DeleteWorkRequest.SerializeToString,
+            protos_dot_data__pb2.DeleteWorkResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetWorkName(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/v1.user.User/GetWorkName',
+            protos_dot_data__pb2.GetWorkNameRequest.SerializeToString,
+            protos_dot_data__pb2.GetWorkNameResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
