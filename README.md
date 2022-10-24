@@ -1,6 +1,6 @@
 # KETI-ExaScale HKubectl
 ## Introduction of KETI-ExaScale HKubectl
-HKubectl for KETI-ExaScale Platform
+KETI-Operator for KETI-ExaScale Platform
 
 Developed by KETI
 ## Contents
@@ -13,18 +13,18 @@ Developed by KETI
 [4. How to Use](#how-to-use)
 
 ## Requirement
-> GOLANG
+> Kubernetes <= 1.24
 
-> KETI-Operator
+> HKubectl
+
+> KETI GPU Scheduler
 
 ## How to Install
-    $ go build -o hkubectl main.go
+    $ kubectl apply -f ketioperator.yaml
 ## Install Check
-Build Check
-    
-    $ ls
-    hkubectl
+Create Check
 
-## How to Use
-    $ ./hkubectl -h
+    $ kubectl get pods -A
+    NAMESPACE     NAME                     READY   STATUS      RESTARTS      AGE
+    gpu           operatortest-h6l2l       1/1     Running     0             21s
 
